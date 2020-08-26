@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- 
+  <parent>
+    <groupId>org.apache.dubbo</groupId>
+    <artifactId>dubbo-parent</artifactId>
+    <version>2.7.8</version>
+  </parent>
+   -->
+  
+	<groupId>com.zfsoft</groupId>
+	<artifactId>dubbo-demo-parent</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	
+	<description>dubbo-demo</description>
+
+	<developers>
+		<developer>
+			<name>魏广跃</name>
+			<id>1571</id>
+			<organization>zfsoft.inc</organization>
+			<email>weiyue888999@126.com</email>
+		</developer>
+	</developers>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  		<junit.version>4.12</junit.version>
+		<slf4j.version>1.7.9</slf4j.version>
+		<log4j.version>2.3</log4j.version>
+		<servlet.api.version>3.0.1</servlet.api.version>
+		<junit.version>4.12</junit.version>
+		<dubbo.version>2.7.8</dubbo.version>
+	</properties>
+	
+	<modules>
+		<module>dubbo-demo-commons</module>
+		<module>dubbo-demo-consumer</module>
+		<module>dubbo-demo-producer</module>
+		<module>dubbo-demo-support</module>
+		<module>dubbo-demo-web</module>
+		<module>dubbo-demoa-doc</module>
+	</modules>
+	
+	<!-- 依赖组件版本管理 -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.apache.dubbo</groupId>
+				<artifactId>dubbo</artifactId>
+				<version>${dubbo.version}</version>
+			</dependency>
+			<!--log4j2依赖包-->
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-api</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-core</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<!--log4j2与slf4j的桥接依赖-->
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-slf4j-impl</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<!--slf4j依赖包-->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>
