@@ -8,7 +8,7 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>zfcaptcha-doc</artifactId>
+	<artifactId>dubbo-demo-doc</artifactId>
 	<packaging>jar</packaging>
 	
 </project>

@@ -1,11 +1,11 @@
-package com.zfsoft.spi;
+package pers.xiaomo.demo.dubbo.ext.impl;
 
 import org.apache.dubbo.common.context.FrameworkExt;
 import org.apache.dubbo.common.extension.SPI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.zfsoft.comp.AbstractFrameworkExtAdaptor;
+import pers.xiaomo.demo.dubbo.ext.AbstractFrameworkExtAdaptor;
 
 @SPI
 public class DemoFrameworkExt extends AbstractFrameworkExtAdaptor implements FrameworkExt {

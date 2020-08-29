@@ -1,4 +1,4 @@
-package com.zfsoft.comp;
+package pers.xiaomo.demo.dubbo.ext;
 
 import org.apache.dubbo.common.context.FrameworkExt;
 

@@ -46,7 +46,7 @@
 		<module>dubbo-demo-producer</module>
 		<module>dubbo-demo-support</module>
 		<module>dubbo-demo-web</module>
-		<module>dubbo-demoa-doc</module>
+		<module>dubbo-demo-doc</module>
 	</modules>
 	
 	<!-- 依赖组件版本管理 -->

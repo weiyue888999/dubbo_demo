@@ -1,1 +1,1 @@
-DemoFrameworkExt = com.zfsoft.spi.DemoFrameworkExt
+MyDemoFrameworkExt = pers.xiaomo.demo.dubbo.ext.impl.MyDemoFrameworkExt

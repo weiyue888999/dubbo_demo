@@ -1,4 +1,4 @@
-package com.zfsoft.dto;
+package pers.xiaomo.demo.dubbo.dto;
 
 import java.io.Serializable;
 

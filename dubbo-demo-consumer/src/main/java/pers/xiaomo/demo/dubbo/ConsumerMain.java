@@ -1,12 +1,12 @@
-package com.zfsoft;
+package pers.xiaomo.demo.dubbo;
 
 import org.apache.dubbo.config.ApplicationConfig;
 import org.apache.dubbo.config.RegistryConfig;
 
-import com.zfsoft.dto.MessageParamDto;
-import com.zfsoft.dto.MessageResultDto;
-import com.zfsoft.service.MessageService;
 import org.apache.dubbo.config.ReferenceConfig;
+import pers.xiaomo.demo.dubbo.dto.MessageParamDto;
+import pers.xiaomo.demo.dubbo.dto.MessageResultDto;
+import pers.xiaomo.demo.dubbo.service.MessageService;
 
 public class ConsumerMain {
 
