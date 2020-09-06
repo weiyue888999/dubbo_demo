@@ -1,6 +1,12 @@
-package pers.xiaomo.demo.dubbo.dto;
+package pers.xiaomo.demo.dubbo.common;
 
-public class Result<T> {
+import java.io.Serializable;
+
+/**
+ * 结果对象
+ * @param <T>
+ */
+public class Result<T> implements Serializable {
 
     private boolean success;
 
@@ -8,7 +14,7 @@ public class Result<T> {
 
     private T data;
 
-    public boolean isSuccess() {
+    public boolean success() {
         return success;
     }
 

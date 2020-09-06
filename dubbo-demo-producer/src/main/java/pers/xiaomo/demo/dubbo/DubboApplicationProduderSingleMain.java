@@ -1,5 +1,6 @@
 package pers.xiaomo.demo.dubbo;
 
+import org.apache.dubbo.config.ApplicationConfig;
 import org.apache.dubbo.config.ProtocolConfig;
 import org.apache.dubbo.config.RegistryConfig;
 import org.apache.dubbo.config.ServiceConfig;
@@ -15,10 +16,16 @@ import java.util.concurrent.TimeUnit;
 public class DubboApplicationProduderSingleMain {
 
     public static void main(String[] args) {
+
+        ApplicationConfig application = new ApplicationConfig();
+        application.setQosEnable(false);
+        application.setName("ConsumerMain");
+
         List<RegistryConfig> registryConfigList = new ArrayList<>();
         {
             RegistryConfig registry = new RegistryConfig();
             registry.setAddress("zookeeper://127.0.0.1:2181");
+            registryConfigList.add(registry);
         }
 
         List<ProtocolConfig> protocolConfigList = new ArrayList<>();
@@ -42,6 +49,8 @@ public class DubboApplicationProduderSingleMain {
             service.setRef(messageService);
             service.setExport(true);
             service.setVersion("1.0.0");
+            service.setFilter("webContextFilter");
+            service.setApplication(application);
 
             serviceConfigList.add(service);
         }

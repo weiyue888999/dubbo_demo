@@ -1,6 +1,6 @@
 package pers.xiaomo.demo.dubbo.service.impl;
 
-import pers.xiaomo.demo.dubbo.dto.Result;
+import pers.xiaomo.demo.dubbo.common.Result;
 import pers.xiaomo.demo.dubbo.dto.UserDto;
 import pers.xiaomo.demo.dubbo.service.UserService;
 

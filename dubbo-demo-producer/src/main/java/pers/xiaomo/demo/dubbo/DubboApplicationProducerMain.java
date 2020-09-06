@@ -11,11 +11,13 @@ import org.apache.dubbo.config.ServiceConfig;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 public class DubboApplicationProducerMain {
 
     public static void main(String[] args) {
+
 
         ApplicationConfig application = new ApplicationConfig();
         application.setQosEnable(false);
@@ -29,6 +31,8 @@ public class DubboApplicationProducerMain {
         }
 
         List<ProtocolConfig> protocolConfigList = new ArrayList<>();
+
+        /**
         {
             ProtocolConfig protocol = new ProtocolConfig();
             protocol.setName("injvm");
@@ -41,7 +45,7 @@ public class DubboApplicationProducerMain {
             protocol.setThreads(4);
             protocolConfigList.add(protocol);
         }
-        /**
+
         {
             ProtocolConfig protocol = new ProtocolConfig();
             protocol.setName("grpc");
@@ -69,6 +73,9 @@ public class DubboApplicationProducerMain {
             service.setRef(demoServiceImpl);
             service.setExport(true);
             service.setVersion("1.0.0");
+            service.setFilter("webContextFilter");
+            //service.setToken(token);
+            //service.setToken(true);
 
             serviceConfigList.add(service);
         }
@@ -84,12 +91,14 @@ public class DubboApplicationProducerMain {
             service.setRef(messageService);
             service.setExport(true);
             service.setVersion("1.0.0");
+            service.setFilter("webContextFilter");
 
             serviceConfigList.add(service);
         }
 
         for(ServiceConfig sc : serviceConfigList){
             sc.export();
+            //sc.unexport();
         }
 
         try {
