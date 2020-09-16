@@ -1,0 +1,18 @@
+spring:
+  resources:
+    static-locations: classpath:static/
+  mvc:
+    view:
+      prefix: html/
+      suffix: .html
+  freemarker:
+    cache: false
+  devtools:
+    restart:
+      additional-exclude: static/**,public/**,templates/**
+      enabled: true
+dubbo:
+  application:
+    id: test
+  registry:
+    address: zookeeper://127.0.0.1:2181

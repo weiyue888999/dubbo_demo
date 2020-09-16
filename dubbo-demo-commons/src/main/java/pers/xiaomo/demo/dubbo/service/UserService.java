@@ -5,9 +5,6 @@ import pers.xiaomo.demo.dubbo.dto.UserDto;
 
 import java.util.List;
 
-/**
- * 用户服务
- */
 public interface UserService {
 
     Result<List<UserDto>> queryAll();

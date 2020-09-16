@@ -17,4 +17,9 @@ public class DemoServiceImpl implements DemoService {
         return ""+num;
     }
 
+    @Override
+    public String call(String num) {
+        return num;
+    }
+
 }

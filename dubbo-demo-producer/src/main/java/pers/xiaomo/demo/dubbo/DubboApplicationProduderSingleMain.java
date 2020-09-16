@@ -34,6 +34,7 @@ public class DubboApplicationProduderSingleMain {
             ProtocolConfig protocol = new ProtocolConfig();
             protocol.setName("dubbo");
             protocol.setThreads(4);
+            protocol.setIothreads(4);
             protocolConfigList.add(protocol);
 
         }
