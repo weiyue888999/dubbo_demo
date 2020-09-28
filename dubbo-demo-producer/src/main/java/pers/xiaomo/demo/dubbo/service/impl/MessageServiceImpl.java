@@ -5,6 +5,8 @@ import org.slf4j.LoggerFactory;
 import pers.xiaomo.demo.dubbo.common.Result;
 import pers.xiaomo.demo.dubbo.service.MessageService;
 
+import java.util.concurrent.CompletableFuture;
+
 public class MessageServiceImpl implements MessageService{
 
 	private static final Logger log = LoggerFactory.getLogger(MessageServiceImpl.class);
@@ -15,5 +17,10 @@ public class MessageServiceImpl implements MessageService{
 		result.setData(msg);
 		result.setSuccess(true);
 		return result;
+	}
+
+	@Override
+	public CompletableFuture<Result<String>> sendAsync(String msg) {
+		return null;
 	}
 }
